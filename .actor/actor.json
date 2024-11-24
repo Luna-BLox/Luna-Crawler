@@ -1,0 +1,180 @@
+{
+  "actorSpecification": 1,
+  "name": "luna-crawler",
+  "title": "Luna Crawler",
+  "version": "0.0.1",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "type",
+              "title",
+              "description",
+              "creator",
+              "creatorUrl",
+              "likes",
+              "dislikes",
+              "active",
+              "favorites",
+              "visits",
+              "voicechat",
+              "camera",
+              "created",
+              "updated",
+              "serversize",
+              "genre",
+              "subgenre",
+              "url",
+              "pfp",
+              "displayName",
+              "username",
+              "friends",
+              "followers",
+              "following",
+              "about",
+              "name",
+              "members",
+              "roles",
+              "games",
+              "game",
+              "gameUrl"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "type": {
+                "label": "Type",
+                "format": "text"
+              },
+              "title": {
+                "label": "Title",
+                "format": "text"
+              },
+              "description": {
+                "label": "Description",
+                "format": "text"
+              },
+              "creator": {
+                "label": "Creator",
+                "format": "text"
+              },
+              "creatorUrl": {
+                "label": "Creator URL",
+                "format": "link"
+              },
+              "likes": {
+                "label": "Likes",
+                "format": "number"
+              },
+              "dislikes": {
+                "label": "Dislikes",
+                "format": "number"
+              },
+              "active": {
+                "label": "Active",
+                "format": "text"
+              },
+              "favorites": {
+                "label": "Favorites",
+                "format": "text"
+              },
+              "visits": {
+                "label": "Visits",
+                "format": "text"
+              },
+              "voicechat": {
+                "label": "Voice Chat",
+                "format": "text"
+              },
+              "camera": {
+                "label": "Camera",
+                "format": "text"
+              },
+              "created": {
+                "label": "Created",
+                "format": "date"
+              },
+              "updated": {
+                "label": "Updated",
+                "format": "date"
+              },
+              "serversize": {
+                "label": "Server Size",
+                "format": "number"
+              },
+              "genre": {
+                "label": "Genre",
+                "format": "text"
+              },
+              "subgenre": {
+                "label": "Subgenre",
+                "format": "text"
+              },
+              "url": {
+                "label": "URL",
+                "format": "link"
+              },
+              "pfp": {
+                "label": "Profile Picture",
+                "format": "image"
+              },
+              "displayName": {
+                "label": "Display Name",
+                "format": "text"
+              },
+              "username": {
+                "label": "Username",
+                "format": "text"
+              },
+              "friends": {
+                "label": "Friends",
+                "format": "number"
+              },
+              "followers": {
+                "label": "Followers",
+                "format": "number"
+              },
+              "following": {
+                "label": "Following",
+                "format": "number"
+              },
+              "about": {
+                "label": "About",
+                "format": "text"
+              },
+              "name": {
+                "label": "Name",
+                "format": "text"
+              },
+              "members": {
+                "label": "Members",
+                "format": "number"
+              },
+              "roles": {
+                "label": "Roles",
+                "format": "array"
+              },
+              "games": {
+                "label": "Games",
+                "format": "array"
+              },
+              "game": {
+                "label": "Game",
+                "format": "text"
+              },
+              "gameUrl": {
+                "label": "Game URL",
+                "format": "link"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "title": "Luna Crawler",
+    "description": "Luna Crawler Configuration",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "startUrls": {
+        "title": "Start URLs",
+        "type": "array",
+        "description": "URLs to start crawling from",
+        "editor": "requestListSources",
+        "prefill": [{ "url": "https://www.roblox.com/charts/?device=all&country=all" }]
+      },
+      "enqueueAuthors": {
+        "title": "Enqueue Authors",
+        "type": "boolean",
+        "description": "Enqueue authors of crawled Games/Communities/Badges",
+        "default": true
+      }
+    },
+    "required": ["startUrls"]
+  }
+  

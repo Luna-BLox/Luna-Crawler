@@ -1,4 +1,11 @@
 import { PlaywrightCrawler, Dataset } from "crawlee";
+import { Actor } from 'apify'
+
+await Actor.init();
+
+const inputs = await Actor.getInput()
+const startUrls = inputs?.startUrls || ["https://www.roblox.com/charts/?device=all&country=all"]
+const enqueAuthors = inputs?.enqueAuthors || false
 
 const crawler = new PlaywrightCrawler({
   async requestHandler({ page, enqueueLinks, log }) {
@@ -62,6 +69,16 @@ const crawler = new PlaywrightCrawler({
         };
       });
       await Dataset.pushData(gameInfo);
+      if (enqueAuthors) {
+        if (gameInfo.creatorUrl.includes("/groups/")) {
+          log.info("Added Creator Group (Migration to Communities) to queue");
+          await crawler.addRequests([gameInfo.creatorUrl]);
+        } else if (gameInfo.creatorUrl.includes("/users/")) {
+          log.info("Added Creator User to queue");
+          await crawler.addRequests([gameInfo.creatorUrl]);
+        }
+      }
+      
       log.info(`Scraped game: ${gameInfo.title}`);
     } else if (page.url().includes("/users/")) {
       const userInfo = await page.evaluate(() => {
@@ -114,6 +131,12 @@ const crawler = new PlaywrightCrawler({
       });
       await Dataset.pushData(communityInfo);
       log.info(`Scraped community (Formerly Groups): ${communityInfo.name}`);
+      if (enqueAuthors) {
+        if (communityInfo.creatorUrl.includes("/users/")) {
+          log.info("Added Creator User to queue");
+          await crawler.addRequests([communityInfo.creatorUrl]);
+        }
+      }
     } else if (page.url().includes("/badges/")) {
       const badgeInfo = await page.evaluate(() => {
         return {
@@ -132,4 +155,4 @@ const crawler = new PlaywrightCrawler({
   headless: true, // Enable headless mode to run the crawler in the background
 });
 
-await crawler.run([]);
+await crawler.run(startUrls);

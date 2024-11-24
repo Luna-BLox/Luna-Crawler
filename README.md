@@ -1,6 +1,7 @@
+(If you Are viewing this on Apify, please go to the [GitHub Repository](https://github.com/Luna-BLox/Luna-Crawler) instead.)
 
-# Lunablox Crawler
-LunaBlox Crawler is a web crawler for Roblox. It is built using the [Crawlee](https://github.com/apify/crawlee) framework in Node CommonJS (CJS).
+# Luna Crawler
+Luna Crawler is a web crawler for Roblox. It is built using the [Crawlee](https://github.com/apify/crawlee) framework in Node CommonJS (CJS).
 
 ## Usage
 All you need to do is run these commands:
@@ -16,8 +17,10 @@ And then you're done 🎉
 | Device | Supported |
 |--|--|
 | Windows |✅|
-| Mac OS | ✅❔|
+| Mac OS | ✅|
 | Linux | ✅|
+
+Don't have a high end PC? No problem! You can use the [Apify Cloud](https://www.apify.com/) to run the crawler for you.
 
 ## Supported Scrapes
 
@@ -26,6 +29,7 @@ And then you're done 🎉
 - [x] [Communities](#community-example) (Groups)
 - [x] [Badges](#badge-example)
 - [x] [Users](#user-example)
+- [ ] Games/User Search
 
 > [!CAUTION]
 > These schemas aren't final and can be changed at any time!
