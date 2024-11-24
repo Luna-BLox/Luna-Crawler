@@ -156,3 +156,4 @@ const crawler = new PlaywrightCrawler({
 });
 
 await crawler.run(startUrls);
+await Actor.exit(1);
