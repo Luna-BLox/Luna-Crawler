@@ -20,7 +20,7 @@ And then you're done 🎉
 | Mac OS | ✅|
 | Linux | ✅|
 
-Don't have a high end PC? No problem! You can use the [Apify Cloud](https://www.apify.com/) to run the crawler for you.
+Don't have a high end PC? No problem! You can use the [Apify Cloud](https://apify.com/lunablox/luna-crawler?fpr=lcvev) to run the crawler for you.
 
 ## Supported Scrapes
 
